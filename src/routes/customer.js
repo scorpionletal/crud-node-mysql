@@ -7,6 +7,6 @@ router.post('/add',customerController.save);
 router.get('/delete/:dni',customerController.delete);
 router.get('/update/:dni',customerController.edit);
 router.post('/update/:dni',customerController.update);
-
+router.get('/addcustomers',customerController.newpage);
 
 module.exports= router;

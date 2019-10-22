@@ -1,6 +1,60 @@
-  <% include partials/_header %>
+<% include partials/_header %>
 
-  
+ <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Add Clientes</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nuevo Cliente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <form action="/add" method="post">
+                <div class="form-group">
+                    <input type="text" name="dni" placeholder="Dni" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="nombre" placeholder="Nombre" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="apellido" placeholder="Apellido" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="direccion" placeholder="Direccion" class="form-control">
+                </div>
+                <div class="form-group">
+                        <input type="text" name="mz_lt" placeholder="MZ_lt" class="form-control">
+                </div>
+                <div class="form-group">
+                        <input type="text" name="celular_1" placeholder="Celular_1" class="form-control">
+                </div>
+                <div class="form-group">
+                        <input type="text" name="celular_2" placeholder="Celular_2" class="form-control">
+                </div>
+                <div class="form-group">
+                        <input type="text" name="correo" placeholder="Correo" class="form-control">
+                </div>
+                <div class="form-group">
+                        <input type="text" name="repVentas" placeholder="RepVentas" class="form-control">
+                </div>
+                <div class="form-group">
+                        <input type="text" name="actividad" placeholder="Actividad" class="form-control">
+                </div>
+                <div class="card-body float-right justify-content-between align-items-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">
+                        Crear Cliente
+                    </button>
+                </div>
+            </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
   <div class="container-fluid">
       <div class="row">
           <div class="col-md-12 mt-3 ">
@@ -38,7 +92,7 @@
                                 <td><%= data[i].repVentas %></td>
                                 <td><%= data[i].actividad %></td>
                                 <td >
-                                    <a href="/delete/<%=data[i].dni %>" class="btn btn-danger btn-sm rounded"><i class="fa fa-minus-square-o" style="font-size:15px"></i></a>
+                                    <a href="/delete/<%=data[i].dni %>" class="btn btn-danger btn-sm rounded" ><i class="fa fa-minus-square-o" style="font-size:15px"></i></a>
                                     <a href="/update/<%=data[i].dni %>" class="btn btn-info btn-sm rounded" ><i class="fa fa-check-square-o" style="font-size:15px"></i></a>                                 
                                 </td>
                             </tr>
@@ -48,48 +102,9 @@
               </table>
 
           </div>
-          <div class="col-md-5 mt-5">
-            <div class="card">
-                <div class="card-body">
-                        <form action="/add" method="post">
-                            <div class="form-group">
-                                <input type="text" name="dni" placeholder="Dni" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="nombre" placeholder="Nombre" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="apellido" placeholder="Apellido" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="direccion" placeholder="Direccion" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                    <input type="text" name="mz_lt" placeholder="MZ_lt" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                    <input type="text" name="celular_1" placeholder="Celular_1" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                    <input type="text" name="celular_2" placeholder="Celular_2" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                    <input type="text" name="correo" placeholder="Correo" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                    <input type="text" name="repVentas" placeholder="RepVentas" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                    <input type="text" name="actividad" placeholder="Actividad" class="form-control">
-                            </div>
-                         <button type="submit" class="btn btn-primary">
-                            Save Customer
-                        </button>
-                        </form>
-                </div>
-            </div>
-          </div>
+         
       </div>
   </div>
 
+  
   <% include partials/_footer %>

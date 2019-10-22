@@ -1,0 +1,43 @@
+<% include partials/_header %>
+<div class="col-md-5 mt-5">
+        <div class="card">
+            <div class="card-body">
+                    <form action="/add" method="post">
+                        <div class="form-group">
+                            <input type="text" name="dni" placeholder="Dni" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Nombre" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="apellido" placeholder="Apellido" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="direccion" placeholder="Direccion" class="form-control">
+                        </div>
+                        <div class="form-group">
+                                <input type="text" name="mz_lt" placeholder="MZ_lt" class="form-control">
+                        </div>
+                        <div class="form-group">
+                                <input type="text" name="celular_1" placeholder="Celular_1" class="form-control">
+                        </div>
+                        <div class="form-group">
+                                <input type="text" name="celular_2" placeholder="Celular_2" class="form-control">
+                        </div>
+                        <div class="form-group">
+                                <input type="text" name="correo" placeholder="Correo" class="form-control">
+                        </div>
+                        <div class="form-group">
+                                <input type="text" name="repVentas" placeholder="RepVentas" class="form-control">
+                        </div>
+                        <div class="form-group">
+                                <input type="text" name="actividad" placeholder="Actividad" class="form-control">
+                        </div>
+                     <button type="submit" class="btn btn-primary">
+                        Save Customer
+                    </button>
+                    </form>
+            </div>
+        </div>
+      </div>
+<% include partials/_footer %>      

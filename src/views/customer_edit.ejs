@@ -1,50 +1,48 @@
 <% include partials/_header %>
 
 <div class="container-fluid mt-5">
-    <div class="row">
-        <div class="col-md-5">
-            <div class="card">
-                <div class="card-body">
-                        <form action="/update/<%= data.dni%>" method="post">
-                            <div class="form-group">
-                                    <input type="text" name="dni" value="<%= data.dni%>" class="form-control">
-                                </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                            <form action="/update/<%= data.dni%>" method="post">
                                 <div class="form-group">
-                                    <input type="text" name="nombre" value="<%= data.nombre%>" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="apellido" value="<%= data.apellido%>" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="direccion" value="<%= data.direccion%>"  class="form-control">
-                                </div>
-                                <div class="form-group">
-                                        <input type="text" name="mz_lt" value="<%= data.mz_lt%>" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                        <input type="text" name="celular_1" value="<%= data.celular_1%>"  class="form-control">
-                                </div>
-                                <div class="form-group">
-                                        <input type="text" name="celular_2" value="<%= data.celular_2%>" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                        <input type="text" name="correo" value="<%= data.correo%>" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                        <input type="text" name="repVentas" value="<%= data.repVentas%>"  class="form-control">
-                                </div>
-                                <div class="form-group">
-                                        <input type="text" name="actividad" value="<%= data.actividad%>"  class="form-control">
-                                </div>
-                            <button type="submit" class="btn btn-primary">
-                                Edit Customer
-                            </button>
-                            </form>
+                                        <input type="text" name="dni" value="<%= data.dni%>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="nombre" value="<%= data.nombre%>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="apellido" value="<%= data.apellido%>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="direccion" value="<%= data.direccion%>"  class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="text" name="mz_lt" value="<%= data.mz_lt%>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="text" name="celular_1" value="<%= data.celular_1%>"  class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="text" name="celular_2" value="<%= data.celular_2%>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="text" name="correo" value="<%= data.correo%>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="text" name="repVentas" value="<%= data.repVentas%>"  class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="text" name="actividad" value="<%= data.actividad%>"  class="form-control">
+                                    </div>
+                                <button type="submit" class="btn btn-primary">
+                                    Edit Customer
+                                </button>
+                                </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
 <% include partials/_footer %>
